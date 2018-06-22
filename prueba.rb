@@ -1,8 +1,6 @@
 data = []
 File.open("notas.csv", "r") { |file| data= file.readlines }
 
-print data.map(&:chomp)
-
 def promedios(hashito)
   lines = hashito.map(&:chomp)
   nota = File.open("promedios.csv", 'w')
