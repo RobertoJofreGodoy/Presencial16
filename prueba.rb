@@ -37,7 +37,6 @@ end
 
 def aprobados(hashito, min)
 	lines = hashito.map(&:chomp)
-  	nota = File.open("promedios.csv", 'w')
 	lines.each do |value|
     promedio = value.split(',')
     sum = 0
@@ -73,7 +72,7 @@ while option!= 4
 	when 3
 		min = 5
 		while min != 0
-			puts "Ingrese nota minima de aprobacion:\no ingrese [0] para volver"
+			puts "Ingrese nota minima de aprobacion (entre 1 y 10):\n"
 			min = gets
 			if  min.to_i > 0 && min.to_i <11
 				puts "Alumnos aprobados:\n"
